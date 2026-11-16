@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.env
+.env.*
+!.env.example
+*.bak
+*.bak[0-9]
+*.phone.bak
+*.log
+.DS_Store

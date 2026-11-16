@@ -1,0 +1,24 @@
+# Scape AI
+> Scape AI builds AI assistants and chatbots, trains and fine-tunes custom models, and runs LLM evaluation and benchmarks for enterprises, small businesses and independent experts. Part of Scape Data Solutions.
+
+## Services
+- [AI chatbot development](https://ai.scapedatasolutions.com/solutions/ai-chatbot-development): chatbots grounded in your documents, with citations and human handoff
+- [RAG development](https://ai.scapedatasolutions.com/solutions/rag-development-services)
+- [AI agent development](https://ai.scapedatasolutions.com/solutions/ai-agent-development-services)
+- [MCP server development](https://ai.scapedatasolutions.com/solutions/mcp-server-development)
+- [LLM evaluation services](https://ai.scapedatasolutions.com/solutions/llm-evaluation-services)
+- [AI agent evaluation](https://ai.scapedatasolutions.com/solutions/ai-agent-evaluation-benchmarking)
+- [AI red teaming](https://ai.scapedatasolutions.com/solutions/ai-red-teaming-services)
+- [Fine-tune a language model](https://ai.scapedatasolutions.com/solutions/fine-tune-small-language-model)
+- [Private LLM for business](https://ai.scapedatasolutions.com/solutions/private-llm-for-business)
+
+## Try it
+- [AI Lab: live demos](https://ai.scapedatasolutions.com/lab)
+
+## Contact
+- [Start a project](https://ai.scapedatasolutions.com/contact) · info@scapedatasolutions.com
+
+## Company
+- [About Scape AI](https://ai.scapedatasolutions.com/about)
+- [Site map](https://ai.scapedatasolutions.com/sitemap)
+- [Privacy policy](https://ai.scapedatasolutions.com/privacy)

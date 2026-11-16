@@ -1,0 +1,96 @@
+import AgentDemo from '@/components/AgentConsole';
+import { withOG } from '@/lib/seo';
+import Link from 'next/link';
+import Reveal from '@/components/Reveal';
+import { Faq } from '@/components/Chrome';
+import { Tabs, Counter, TitleSwap, Stepper, TypedTerm } from '@/components/Interactive';
+import Offer from '@/components/Offer';
+import { DemoSection } from '@/components/DemoWindow';
+import PlanPreview from '@/components/PlanPreview';
+import { Interlude, Bg } from '@/components/BgVideo';
+import { media } from '@/lib/media';
+import { AssistantDemo, TrainingPlayground } from '@/components/Demos';
+import { EvalLab, RagViz, RoiCalc } from '@/components/Labs';
+import { services, industries, audiences, detail } from '@/lib/data';
+export const metadata = withOG({ title: { absolute: 'AI Systems for Businesses, Enterprises and Individuals | Scape AI' }, description: 'Scape AI implements AI systems end to end for enterprises, small and mid-sized businesses and individuals: strategy, agents, custom models, automation, evaluation, data and managed operations.', alternates: { canonical: '/' } });
+const fw = [
+ {t:'AI Strategy',h:'Decide what to build, and what not to',p:'Opportunity sizing, readiness audit and a sequenced roadmap tied to business metrics.',b:['Use-case value and effort scoring','Data, security and skills readiness','Build, buy or partner decisions','Governance and ownership model']},
+ {t:'Solutions',h:'Production agents and models',p:'LLM applications, RAG systems, fine-tuned models and ML pipelines engineered for real traffic.',b:['Agents with tools and guardrails','Retrieval over your own knowledge','Fine-tuning of open-weight models','MLOps, CI/CD and observability']},
+ {t:'Evaluation',h:'Independent proof of quality',p:'Benchmarks, expert human review and red-teaming with auditable reports.',b:['Task-specific benchmark design','Human and automated scoring','Safety and bias testing','Continuous regression monitoring']},
+ {t:'Data',h:'Data your models can learn from',p:'Collection, labeling, cleaning and synthetic generation with measured quality.',b:['Annotation at scale','Golden sets and audits','Synthetic data pipelines','Provenance documentation']},
+ {t:'Talent',h:'Specialists when you need them',p:'Vetted ML, LLM and data engineers, plus delivery leads, on flexible terms.',b:['Engineers matched to your stack','Fast team ramp-up','Delivery leadership','Knowledge transfer']},
+ {t:'Managed',h:'We run it after launch',p:'Monitoring, retraining and optimization under agreed service levels.',b:['Drift and incident monitoring','Scheduled retraining','Cost and latency tuning','Monthly performance review']}
+];
+const steps = [{t:'Plan the sprint',p:'Goals, owners and acceptance tests are set at the start of every cycle.'},{t:'Build in the open',p:'Daily progress in a shared repo with weekly demos you can click through.'},{t:'Test in a sandbox',p:'Automated and human evaluation run before anything touches production.'},{t:'Release to production',p:'Staged rollout with monitoring, rollback plans and clear ownership.'},{t:'Measure and improve',p:'Quality, cost and latency feed the next cycle, so the system keeps getting better.'}];
+const term = ['<span style="color:#6C9BFF">$</span> scape eval run --model your-agent','→ loading test suite…','→ scoring accuracy · safety · latency · cost','<span style="color:#4CB68E">✓</span> report ready','<span style="color:#4CB68E">✓</span> regressions flagged','<span style="color:#4CB68E">✓</span> human review queued'];
+const faq = [['What is full-stack AI services?','One team covering strategy, development, evaluation, data, integration, talent and ongoing operations, so you do not coordinate several vendors.'],['Can you work inside our own cloud?','Yes. Enterprise engagements can run in your environment with your access controls and audit requirements.'],['Do you only build, or also evaluate?','Both. AI Evaluation is a standalone service for teams who already have models or agents and need independent quality and safety testing.'],['How do engagements start?','With a short scoped discovery. Scope, milestones and cost are agreed in writing before build work begins.'],['Who owns the work product?','You do. Code, models, data and documentation are transferred to you under the agreement.']];
+const Arrow = () => <span className="ar">↗</span>;
+export default function Home() {
+  const tech = ['Frontier model APIs','Open-weight models','Vector databases','Agent frameworks','Evaluation harnesses','Data labeling tools','MLOps pipelines','Cloud and on-prem','Observability','Guardrails'];
+  const eng = [['Project','Fixed scope and milestones for a defined outcome such as an agent, an evaluation suite or a data pipeline.'],['Dedicated team','A cross-functional pod of engineers, data and delivery leads working as an extension of your team.'],['Managed service','We operate and improve your AI systems under agreed service levels and monthly reviews.']];
+  const ph = [['Discover','Frame the problem, data and success metrics.'],['Design','Architecture, model choices and evaluation plan.'],['Build','Agents, pipelines and integrations in short sprints.'],['Evaluate','Benchmarks, red-teaming and human review.'],['Deploy','Staged rollout with monitoring from day one.'],['Operate','Retraining, cost control and continuous improvement.']];
+  const m = [...tech, ...tech];
+  const roles = ['ML engineers','LLM engineers','Data scientists','MLOps engineers','AI product leads','Delivery managers','Research scientists','Data annotators','Evaluation specialists','Red-team testers','Solutions architects','Integration engineers','Analytics engineers','Security reviewers'];
+  return (<>
+
+    <div className="hero"><Bg name="city" dim={0.3} side/>
+      <div className="wrap hg"><div>
+        <Link href="/services/ai-evaluation" className="chip"><i>New</i>AI Evaluation for model builders →</Link>
+        <h1>We implement AI systems <TitleSwap words={['enterprises','growing businesses','SMEs','public institutions','individual experts']}/></h1>
+        <p className="lead">From the first use case to a system running in production. We <b>design, build, integrate and operate AI</b> across your operations, whether you run a global enterprise, a growing business or work on your own.</p>
+        <div className="aud">{[['Enterprises','/for/enterprise'],['SMEs','/for/small-business'],['Individuals','/for/individuals']].map(([t,h])=><Link key={t} href={h} className="cx">{t} →</Link>)}</div>
+        <div className="cta"><Link className="btn p" href="/contact">Get my free AI plan</Link><Link className="btn" href="#demos">See it working</Link></div></div>
+        <div className="stk" role="group" aria-label="The five layers of a Scape AI engagement"><div className="stk-h"><b>Delivery model</b><span className="mono">5 layers · 1 team</span></div>
+          {[['Strategy','Use-case selection, roadmap and governance','Plan'],['Agents and models','Assistants, agents and fine-tuned models in production','Build'],['Data','Collection, labeling and quality control','Prepare'],['Evaluation','Benchmarks, human review and red-teaming','Verify'],['Operations','Monitoring, retraining and cost control','Run']].map(([t,d,tag],i)=><div className="stk-r" style={{'--i':i}} key={t}><span>0{i+1}</span><div><b>{t}</b><small>{d}</small></div><em>{tag}</em></div>)}
+          <div className="stk-f"><span>One accountable team across every layer.</span><Link href="#capabilities">See the framework →</Link></div></div></div></div>
+
+    <section className="rest lt"><div className="wrap"><Reveal><div className="mono rest-k">We work across</div><h2>Model-agnostic. Cloud-agnostic. Accountable from first call to production.</h2>
+      <div className="rest-g">{[['Models',['Frontier model APIs','Open-weight models','Fine-tuned models']],['Data',['Vector databases','Data labeling tools','Synthetic data pipelines']],['Agents',['Agent frameworks','Tool and API integration','Guardrails']],['Evaluation',['Evaluation harnesses','Human review','Red-teaming']],['Operations',['MLOps pipelines','Observability','Cloud and on-prem']]].map(([t,l])=><div key={t}><b className="mono">{t}</b>{l.map(x=><span key={x}>{x}</span>)}</div>)}</div></Reveal></div></section>
+
+    <section className="pn lt alt" id="offer"><div className="wrap"><Reveal><div className="eyebrow">Who we work with</div><h2>Pick who you are. See exactly what you get.</h2><p className="sub">Enterprise rollout, an SME quick win or an individual expert build. Every offer links to a live demo, so you can see the real thing before you talk to us.</p><Offer/></Reveal></div></section>
+
+    <section className="pn deep" id="capabilities"><div className="wrap"><Reveal><div className="eyebrow">The AI stack</div><h2>The Scape AI framework</h2><p className="sub">Pick a layer to see what it covers.</p><Tabs items={fw}/></Reveal>
+      <div className="cards" style={{marginTop:40}}>{services.map((s,i)=><Reveal key={s.slug}><Link className="card" href={`/services/${s.slug}`}><Arrow/><span className="n">{String(i+1).padStart(2,'0')}</span><h3>{s.name}</h3><p>{s.desc}</p></Link></Reveal>)}</div></div></section>
+
+    <Interlude id="see-it" video="handshake" eyebrow="See it working" title="Whatever the scale of the ambition, AI that actually runs." text="Agents, custom models, automation and analytics, built on your data and delivered into the tools your people already use. Six of them are running below."><Link className="btn p" href="#demos">Start with a demo</Link><Link className="btn" href="/solutions">Browse solutions</Link></Interlude>
+
+    <section className="pn ink dchap" id="demos"><div className="wrap"><Reveal><div className="eyebrow">See it working</div><h2>Six live systems. Open any of them.</h2><p className="sub">Each one runs in your browser, the same way we build it for clients. Take your time: they are independent, so start with the one closest to your problem.</p>
+      <div className="dnav">{[['assistant','01','Assistant'],['agent','02','Agent'],['training','03','Model training'],['rag','04','Retrieval'],['eval','05','Evaluation'],['roi','06','Impact']].map(([id,n,t])=><a key={id} href={'#demo-'+id}><span className="mono">{n}</span>{t}</a>)}</div></Reveal></div></section>
+
+    <DemoSection id="demo-assistant" wtitle="Knowledge assistant" wsub="Cited answers · human hand-off" theme="knowledge" title="Ask it anything. It answers from its own knowledge base." text="A support and knowledge assistant with cited sources, human hand-off and your own documents added live." svc={['AI chatbot development','/solutions/ai-chatbot-development']} runs="Retrieval engine with cited sources" spec="Sample knowledge base, plus any document you add" icon="assistant" seeing="An assistant answering only from a knowledge base and citing the source for every answer." tryit="Ask “Is our data safe with you?”, then open the Knowledge tab and add your own document."><AssistantDemo/></DemoSection>
+
+    <DemoSection id="demo-agent" wtitle="Operations agent" wsub="Tool calls with approval gates" theme="flow" title="Agents that plan, call tools and show their work." text="Pick a scenario and watch the agent reason, call tools and return an auditable answer." svc={['AI agent development','/solutions/ai-agent-development-services']} runs="Tool-calling loop with approval gates" spec="Sample back-office records" icon="agent" seeing="An agent breaking a task into steps and calling tools, with every step visible." tryit="Tap a case, watch the agent work, then approve or reject its refund."><AgentDemo/></DemoSection>
+
+    <DemoSection id="demo-training" wtitle="Model training console" wsub="Live backpropagation" theme="contour" title="Watch a model learn from data, for real." text="Change the data, model size and learning rate. Loss, accuracy and the decision boundary are computed live." svc={['Fine-tuning and custom models','/solutions/fine-tune-small-language-model']} runs="Your browser, real backpropagation" spec="Generated 2-D datasets" icon="training" seeing="A small neural network trained in your browser; every curve is computed, not animated." tryit="Raise the learning rate until training becomes unstable, then lower it."><TrainingPlayground/></DemoSection>
+
+    <DemoSection id="demo-rag" wtitle="Retrieval pipeline" wsub="Document to cited answer" theme="space" title="How your documents become grounded answers." text="Documents are split, embedded, retrieved and passed to a model that answers with citations." svc={['RAG development','/solutions/rag-development-services']} runs="Animated walkthrough" spec="Illustrative documents" icon="rag" seeing="The retrieval pipeline stage by stage, from raw document to cited answer." tryit="Click a stage to pause it. Hover to hold the animation."><RagViz/></DemoSection>
+
+    <DemoSection id="demo-eval" wtitle="Evaluation suite" wsub="40 test cases · 3 models" theme="matrix" title="Know whether your model is actually good." text="Pick a model, run the suite and watch every test case resolve." svc={['LLM evaluation','/solutions/llm-evaluation-services']} runs="Simulated suite run" spec="Illustrative pass rates, not published results" icon="eval" seeing="A benchmark run across test cases for quality, safety and cost." tryit="Hover a cell to read its test case. The pass rates are a simulation, not published results."><EvalLab/></DemoSection>
+
+    <DemoSection id="demo-roi" wtitle="Impact calculator" wsub="Hours and cost, from your numbers" theme="ledger" title="What could automation free up for your team?" text="Enter your own volumes and see the time and cost involved." svc={['AI strategy','/services/ai-strategy']} runs="Your browser; nothing is sent" spec="Your own inputs" icon="roi" seeing="A calculator that turns request volume and handling time into hours and cost." tryit="Use your own monthly volume and average handling time."><RoiCalc/></DemoSection>
+
+    <Interlude id="to-production" video="v11" eyebrow="Pilot to production" title="We stay until it works in the real world." text="Staged rollouts, monitoring from day one and clear ownership, so AI becomes part of how your business runs."><Link className="btn p" href="/contact">Get my free AI plan</Link></Interlude>
+
+    <section className="pn lt" id="process"><div className="wrap"><Reveal><h2>Six phases. From AI ambition to impact.</h2></Reveal><div style={{marginTop:70}}><Reveal className="beat"><div className="bg"/><div className="bl"/>{ph.map(([t,d],i)=><div key={t}><i className="mk" style={{'--k':i}}/><h3>{t}</h3><p>{d}</p></div>)}</Reveal></div></div></section>
+
+    <section className="pn deep" id="build-cycle"><div className="wrap"><Reveal><div className="eyebrow">How we deliver</div><h2>A delivery loop that gets better every cycle.</h2><p className="sub">Short cycles, visible progress and an evaluation gate before every release.</p><Stepper steps={steps}/></Reveal></div></section>
+
+    <section className="pn lt alt"><div className="wrap"><Reveal><div className="eyebrow">Engagement</div><h2>Work with us the way that fits.</h2><p className="sub">Three ways to engage, from a defined project to a fully managed service.</p></Reveal><div className="cards">{eng.map(([t,d],i)=><Reveal key={t}><div className="card"><span className="n">0{i+1}</span><h3>{t}</h3><p>{d}</p></div></Reveal>)}</div></div></section>
+
+    <section className="pn deep"><div className="wrap"><Reveal><div className="eyebrow">Sectors and customers</div><h2>Purpose-built AI for your sector.</h2><p className="sub">Domain-specific use cases, not generic demos.</p></Reveal>
+      <div className="cards c3">{industries.map(s=><Reveal key={s.slug}><Link className="card" href={`/industries/${s.slug}`}><Arrow/><h3 style={{marginTop:30}}>{s.name}</h3><p>{s.desc}</p></Link></Reveal>)}</div>
+      <div className="cards c3" style={{marginTop:16}}>{audiences.map(s=><Reveal key={s.slug}><Link className="card" href={`/for/${s.slug}`}><Arrow/><h3 style={{marginTop:30}}>{s.name}</h3><p>{s.desc}</p></Link></Reveal>)}</div></div></section>
+
+    <section className="pn vtal"><Bg name="globe" dim={0.84}/><div className="wrap"><Reveal><h2>Specialists on demand, matched to your stack.</h2><p className="sub" style={{color:'#D3D9E6'}}>Vetted experts across the roles AI projects depend on.</p><div className="chips">{roles.map(c=><span className="cx" key={c} >{c}</span>)}</div><div style={{marginTop:30}}><Link className="btn" href="/services/ai-talent">Explore AI Talent</Link></div></Reveal></div></section>
+
+    <section className="pn deep" id="plan"><div className="wrap"><Reveal><div className="eyebrow">What you get</div><h2>The written plan you receive within 24 hours.</h2><p className="sub">Not a sales call. A document you can take to your team, with scope, timeline, cost and risks. It is yours whether or not we work together. Shown here in example format.</p><PlanPreview/></Reveal></div></section>
+
+    <section className="pn lt"><div className="wrap"><Reveal><div className="eyebrow">Why Scape AI</div><h2>One accountable team instead of three vendors.</h2><p className="sub">How the engagement model differs from a typical split of consultancy, platform and staffing.</p>
+      <div style={{overflowX:'auto'}}><table className="cmp"><thead><tr><th></th><th>Scape AI</th><th>Consultancy only</th><th>Platform only</th></tr></thead><tbody>
+        {[['Strategy to production','Yes','Strategy, limited build','No'],['Independent evaluation','Built in','Rarely','Tooling only'],['Vetted AI talent','On demand','Fixed teams','No'],['Runs in your cloud','Yes','Varies','Rarely'],['Ongoing operations','Optional managed service','Separate contract','Self-serve']].map(r=><tr key={r[0]}><td>{r[0]}</td><td className="y">{r[1]}</td><td>{r[2]}</td><td>{r[3]}</td></tr>)}</tbody></table></div></Reveal></div></section>
+
+    <section className="pn vcta" id="cta"><Bg name="hud" dim={0.62}/><div className="wrap vb-in"><Reveal><h2>Your first AI win is one 24-hour reply away.</h2><p className="sub">Tell us the problem. An engineer sends back a written plan with scope, timeline and cost. Free, no payment up front, NDA on request.</p><Link className="btn p" href="/contact">Get my free AI plan</Link></Reveal></div></section>
+
+    <section className="pn lt alt" id="faq"><div className="wrap" style={{maxWidth:860}}><Reveal><h2>FAQ</h2><div style={{marginTop:28}}><Faq list={faq}/></div></Reveal></div></section>
+  </>);
+}
