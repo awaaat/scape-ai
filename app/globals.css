@@ -748,7 +748,7 @@ footer{background:rgba(5,7,13,.88);-webkit-backdrop-filter:blur(10px);backdrop-f
 .exm .nope{color:rgba(255,255,255,.5)}
 .exm .nope:hover{color:#fff}
 
-/* v8.5 video hold: the slow vertical drift freezes together with the video during the 14 s pause */
+/* v8.5 video hold: the slow vertical drift freezes together with the video during the 15 s pause */
 .bgv video.hold{animation-play-state:paused}
 
 /* =====================================================================
@@ -1556,3 +1556,28 @@ section.page:before,section.page:after,.dsec:before,.dsec:after{
 .dw .as .as-src.act{background:#eef2fd;border-left-color:#204ecf}
 .dw .as .as-src p{margin:6px 0 0;font-size:12.5px;line-height:1.5;color:#455065}
 @media(max-width:900px){.dw .lab.as{height:680px!important}.dw .as .as-body{grid-template-columns:1fr!important}.dw .as .as-side{display:none}.dw .as .as-row{max-width:94%}}
+
+/* hero-two: two clips crossfading, one visible at a time */
+.bgv.two .bgh{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease}
+.bgv.two .bgh.on{opacity:1}
+.bgv.two .bgh video{width:100%;height:100%;object-fit:cover}
+
+/* ts-fixed: rotating audience word reserves the widest word's space, so the heading and paragraph never shift */
+.tsw-box{display:inline-grid;vertical-align:baseline}
+.tsw-i{grid-area:1/1;visibility:hidden;animation:none}
+.tsw-i.on{visibility:visible;animation:tsw .5s ease both}
+
+/* dsel-custom: Toptal-style demo menu */
+.dsel::after{display:none!important}
+.dsel{position:relative;width:min(520px,100%)}
+.dsel-b{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:14px 16px;background:#fff;color:#262d3d;border:1px solid #d2d6e2;border-radius:4px;font:600 15px/1.2 inherit;text-align:left;cursor:pointer;box-shadow:0 4px 18px #00000055}
+.dsel-b:focus-visible,.dsel-b[aria-expanded=true]{outline:0;border-color:#204ecf;box-shadow:0 0 0 2px #204ecf33,0 4px 18px #00000055}
+.dsel-b svg{color:#204ecf;flex:none;transition:transform .18s ease}
+.dsel-b svg.up{transform:rotate(180deg)}
+.dsel-m{position:absolute;z-index:50;top:calc(100% + 6px);left:0;right:0;margin:0;padding:6px 0;list-style:none;background:#fff;border:1px solid #e3e6ee;border-radius:6px;box-shadow:0 10px 32px rgba(15,23,42,.28);max-height:340px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#8b92a3 transparent;animation:dselIn .14s ease both}
+.dsel-m li{display:flex;gap:10px;align-items:flex-start;padding:11px 16px 11px 12px;cursor:pointer;color:#262d3d}
+.dsel-m li.hi{background:#f2f5fb}
+.dsel-m .ck{width:14px;flex:none;color:#204ecf;font-size:13px;line-height:1.3;text-align:center}
+.dsel-m b{display:block;font:600 14.5px/1.3 inherit}
+.dsel-m small{display:block;margin-top:3px;font:400 12.5px/1.4 inherit;color:#6b7386}
+@keyframes dselIn{from{opacity:0;transform:translateY(-4px)}}

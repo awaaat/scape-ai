@@ -45,7 +45,9 @@ export function Cookie() {
 export function TitleSwap({ words }) {
   const [i, setI] = useState(0);
   useEffect(() => { const id = setInterval(() => setI(x => (x + 1) % words.length), 3500); return () => clearInterval(id); }, [words.length]);
-  return <span className="ts" key={i}><span className="mono sm">for</span> <span className="grad">{words[i]}</span></span>;
+  // Every word is stacked in one grid cell, so the block is always as wide as the longest word.
+  // The heading therefore wraps the same way for every word and the paragraph below never moves.
+  return <span className="tsw-box">{words.map((w, k) => <span key={w + (k === i ? i : '')} className={'tsw-i' + (k === i ? ' ts on' : '')} aria-hidden={k !== i}><span className="mono sm">for</span> <span className="grad">{w}</span></span>)}</span>;
 }
 export function Announce() {
   const [s, setS] = useState(true);
