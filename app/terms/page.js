@@ -8,7 +8,7 @@ export default function Terms() {
     <h2>Services</h2><p>Paid work is governed by a written scope, timeline and price agreed before work starts. If a signed agreement conflicts with these terms, the agreement prevails.</p>
     <h2>Intellectual property</h2><p>The site design, text and code are owned by Scape Data Solutions or its licensors. Ownership of deliverables is set out in each engagement agreement.</p>
     <h2>No warranty</h2><p>The site is provided as is. To the extent the law allows, we are not liable for indirect or consequential loss arising from use of the site or the demos.</p>
-    <h2>Governing law</h2><p>These terms are governed by the laws of Kenya, and the courts of Kenya have jurisdiction, unless the law of your country requires otherwise.</p>
+    <h2>Governing law</h2><p>These terms are governed by the laws of the jurisdiction in which Scape Data Solutions is registered, and the courts of that jurisdiction have jurisdiction, unless the law of your country requires otherwise.</p>
     <h2>Contact</h2><p>Questions about these terms: <a href="mailto:info@scapedatasolutions.com">info@scapedatasolutions.com</a>.</p>
   </Legal>);
 }

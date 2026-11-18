@@ -9,6 +9,5 @@ Every lever below is true to what Scape AI actually offers. Do not add fake scar
 | Authority | Process, eval and framework sections | Specifics over adjectives: benchmarks, red-teaming, written scope. Add real credentials and team bios when ready. |
 | Liking | Tone, outcomes in the visitor's words | Options phrased as the visitor's own problem ("I cannot tell if my AI is reliable"), not our service names. |
 | Scarcity | (only if true) | If you genuinely cap new engagements per month, say so in the CTA. Otherwise leave it out. |
-| Unity | (needs your story) | Kenyan/African roots and local-language support, if you want to lead with shared identity. |
 | Loss aversion | Exit modal copy | "You keep the plan either way" removes risk; the cost of doing nothing is implied by the pain-framed options. |
 Rules: one interruption at a time, nothing before ~9 s on the page, neutral dismiss text ("Not now"), never shame the visitor for leaving.

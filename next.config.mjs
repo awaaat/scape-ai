@@ -8,6 +8,13 @@ const security = [
 export default {
   reactStrictMode: true,
   poweredByHeader: false,
+  async redirects() {
+    return [
+      { source: '/solutions/ai-chatbot-nairobi', destination: '/solutions/ai-chatbot-development', permanent: true },
+      { source: '/solutions/ai-development-company-kenya', destination: '/solutions', permanent: true },
+      { source: '/solutions/data-annotation-services-kenya', destination: '/solutions/data-annotation-services', permanent: true },
+    ];
+  },
   async headers() {
     return [
       { source: '/(.*)', headers: security },

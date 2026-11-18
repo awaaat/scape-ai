@@ -5,7 +5,7 @@ import { solutions } from '@/lib/solutions';
 import { LD, breadcrumbLd } from '@/lib/seo';
 import { HeroType, Split, Rows, Actions, Btn } from '@/components/Blocks';
 export const metadata = withOG({ title: 'AI Solutions: Chatbots, RAG, Agents, Evaluation and Fine-Tuning', description: 'AI chatbot development, RAG, AI agents, MCP servers, LLM evaluation, red teaming, fine-tuning and private LLMs. Pick your problem and see what we build.', alternates: { canonical: '/solutions' } });
-const LABEL = { 'Competitive': 'Core solutions', 'Competitive and rising': 'Rising demand', 'Emerging': 'Emerging', 'Local, low competition': 'Local focus' };
+const LABEL = { 'Competitive': 'Core solutions', 'Competitive and rising': 'Rising demand', 'Emerging': 'Emerging' };
 const GROUPS = [...new Set(solutions.map(s => s.tier))].map(t => [t, LABEL[t] || t]);
 const nm = s => s.h1.split(':')[0].replace(/^./, c => c.toUpperCase());
 export default function Solutions() {

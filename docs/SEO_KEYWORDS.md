@@ -1,6 +1,6 @@
 # SEO keyword plan: Scape AI
 
-**How this was built.** Live SERP research (Nov 2026) on evaluation, chatbot/RAG/agent development, Kenya/Nairobi AI services and
+**How this was built.** Live SERP research (Nov 2026) on evaluation, chatbot/RAG/agent development, AI services and
 emerging 2026 terms, plus the demand-trend reports that surfaced. **Important:** I could not pull exact search volumes or keyword
 difficulty (that needs a paid tool such as Ahrefs/Semrush or Google Keyword Planner). "Competition" below is an *estimate from who
 is ranking* (big funded vendors and listicles = high; thin or new entrants = low). `docs/seo-keywords.csv` has empty volume and rank
@@ -12,24 +12,12 @@ columns to fill after you connect Google Search Console.
   You will not out-rank those quickly on the bare term. You win with specific pages, live demos, and third-party listings.
 - **Evaluation is contested at the top, open at the edge.** "LLM evaluation services" is held by iMerit, Azumo, First Line Software,
   LXT, Patronus and Uber AI Solutions. "AI agent evaluation / benchmarking" is new, with entrants only appearing in 2026.
-- **Kenya/Nairobi is thin.** Clutch/GoodFirms lists are small agencies; one local competitor already sells evaluation and RLHF support
-  from Nairobi, so claim the local terms early.
 - **Fast-growing demand** (third-party trackers, Nov 2026): AI agents, MCP servers, AI voice agents/receptionists, local/private LLMs,
   small-model fine-tuning. Most agencies have not built pages for these yet.
 
 ## Tier 1: fast wins (start here, pages already built)
 | Keyword | Intent | Competition | Page |
 |---|---|---|---|
-| ai development company kenya | Commercial | Low | `/solutions/ai-development-company-kenya` |
-| ai consulting nairobi | Commercial | Low | `/solutions/ai-development-company-kenya` |
-| ai solutions kenya | Commercial | Low | `/solutions/ai-development-company-kenya` |
-| machine learning company kenya | Commercial | Low | `/solutions/ai-development-company-kenya` |
-| ai chatbot development nairobi | Commercial | Low | `/solutions/ai-chatbot-nairobi` |
-| whatsapp ai chatbot kenya | Commercial | Low | `/solutions/ai-chatbot-nairobi` |
-| chatbot for business kenya | Commercial | Low | `/solutions/ai-chatbot-nairobi` |
-| swahili chatbot | Commercial | Low | `/solutions/ai-chatbot-nairobi` |
-| data annotation services kenya | Commercial | Low-Med | `/solutions/data-annotation-services-kenya` |
-| rlhf data services | Commercial | Medium | `/solutions/data-annotation-services-kenya` |
 | ai agent evaluation | Commercial | Low-Med | `/solutions/ai-agent-evaluation-benchmarking` |
 | ai agent benchmarking | Commercial | Low-Med | `/solutions/ai-agent-evaluation-benchmarking` |
 | ai evals as a service | Commercial | Low | `/solutions/ai-agent-evaluation-benchmarking` |
@@ -74,16 +62,12 @@ Needs: backlinks, case studies, Clutch/GoodFirms profiles, and a "best X compani
 | how to reduce hallucinations in rag | Informational | Medium | `(new article)` |
 | ai agent evaluation checklist | Informational | Low | `(new article)` |
 | how to fine tune llama on your own data | Informational | High | `(new article)` |
-| ai chatbot for small business kenya | Commercial | Low | `(new article)` |
-| whatsapp chatbot cost kenya | Commercial | Low | `(new article)` |
 | best ai agent evaluation tools | Commercial-investigation | Medium | `(new article)` |
 | llm benchmark for your business | Informational | Low | `(new article)` |
 
 ## Tier 4: talent-side keywords (only if you recruit)
 | Keyword | Intent | Competition | Page |
 |---|---|---|---|
-| ai trainer jobs kenya | Job-seeker | High volume | `(new page /join)` |
-| data annotation jobs kenya | Job-seeker | High volume | `(new page /join)` |
 | ai evaluator jobs remote | Job-seeker | High volume | `(new page /join)` |
 High volume but job-seeker intent. Pursue only with a real expert-network page and a hiring process.
 
@@ -97,7 +81,6 @@ The strongest growth signals in the research. Worth deciding whether to add an o
 
 ## 30-day action list
 1. Verify the site in Google Search Console and submit `/sitemap.xml` (set `NEXT_PUBLIC_GSC_TOKEN`).
-2. Create a Google Business Profile for the Nairobi presence, and Clutch + GoodFirms listings (these rank for "top AI companies in Kenya").
 3. Link the new `/solutions/*` pages from the parent site (scapedatasolutions.com) with keyword anchors. This is your fastest authority transfer.
 4. Publish the Tier 3 articles, starting with the cost, "RAG vs fine-tuning" and agent-evaluation checklist posts.
 5. After 3-4 weeks, export Search Console queries, fill the volume/rank columns in the CSV, and double down on pages getting impressions.

@@ -19,7 +19,7 @@ export const metadata = {
   title: { default: TITLE, template: '%s | Scape AI' },
   description: DESC,
   applicationName: 'Scape AI', authors: [{ name: 'Scape AI', url: BASE }], creator: 'Scape AI', publisher: 'Scape AI',
-  keywords: ['ai chatbot development', 'llm evaluation services', 'rag development', 'ai agent development', 'fine tune llm', 'mcp server development', 'ai development company kenya', 'ai consulting'],
+  keywords: ['ai chatbot development', 'llm evaluation services', 'rag development', 'ai agent development', 'fine tune llm', 'mcp server development', 'ai consulting'],
   icons: { icon: [{ url: '/favicon.ico?v=4', sizes: 'any' }, { url: '/favicon-32.png?v=4', type: 'image/png', sizes: '32x32' }, { url: '/favicon-16.png?v=4', type: 'image/png', sizes: '16x16' }, { url: '/icon-192.png?v=4', type: 'image/png', sizes: '192x192' }], apple: [{ url: '/apple-touch-icon.png?v=4', sizes: '180x180' }] },
   manifest: '/site.webmanifest',
   openGraph: { type: 'website', siteName: 'Scape AI', title: TITLE, description: DESC, locale: 'en_US' },   // image comes from app/opengraph-image.png
@@ -30,7 +30,7 @@ export const metadata = {
 };
 const SCHEMA = { '@context': 'https://schema.org', '@graph': [
   { '@type': 'Organization', '@id': ORG_ID, name: 'Scape AI', url: BASE, logo: { '@type': 'ImageObject', url: `${BASE}/icon-512.png`, width: 512, height: 512 }, image: `${BASE}/opengraph-image`, description: DESC, email: 'info@scapedatasolutions.com',
-    parentOrganization: { '@type': 'Organization', name: 'Scape Data Solutions', url: 'https://www.scapedatasolutions.com' }, contactPoint: [{ '@type': 'ContactPoint', contactType: 'sales', email: 'info@scapedatasolutions.com', availableLanguage: ['English', 'Swahili'] }] },
+    parentOrganization: { '@type': 'Organization', name: 'Scape Data Solutions', url: 'https://www.scapedatasolutions.com' }, contactPoint: [{ '@type': 'ContactPoint', contactType: 'sales', email: 'info@scapedatasolutions.com', availableLanguage: ['English'] }] },
   { '@type': 'WebSite', '@id': `${BASE}/#site`, url: BASE, name: 'Scape AI', inLanguage: 'en', publisher: { '@id': ORG_ID } }] };
 
 export default function Root({ children }) {

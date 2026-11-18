@@ -32,7 +32,7 @@ CORS needs nothing: `https://ai.scapedatasolutions.com` matches your existing `*
 | Still silent | reminder ladder 24h, 72h, 7d, 14d (urgent: 4h, 24h, 48h), never 20:00-08:00 local | reminders to the client |
 | Score ≥ 65 and still a draft after 24h | | **`[HOT LEAD PENDING]`** to you |
 | Submits | order becomes `submitted`, reference `SCP-XXXXXX` | **`[NEW ORDER · ai]`** to you (Reply goes straight to the client) **and a confirmation to the client** |
-| Every morning 08:00 Nairobi | | `[ORDER DIGEST]` |
+| Every morning 08:00 (backend timezone) | | `[ORDER DIGEST]` |
 
 If the backend is unreachable at submit time, the site falls back to its own `/api/contact` route (set `FORMSPREE_ID`
 to receive these) so a lead is never lost.

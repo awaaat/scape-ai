@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 // Owns play/pause for EVERY <video> on the page, whichever component renders it, including ones added later.
 // Each video runs on its own random schedule: plays for a random PLAY_MIN..PLAY_MAX, holds on its current
 // frame for exactly PAUSE_MS, then plays again for another random stretch. Retune the three numbers here.
-const PAUSE_MS = 10000, PLAY_MIN = 4000, PLAY_MAX = 14000;
+const PAUSE_MS = 15000, PLAY_MIN = 4000, PLAY_MAX = 14000;
 const rnd = (a, b) => a + Math.random() * (b - a);
 
 export default function VideoPauser() {

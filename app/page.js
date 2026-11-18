@@ -8,7 +8,7 @@ import { Tabs, Counter, TitleSwap, Stepper, TypedTerm } from '@/components/Inter
 import Offer from '@/components/Offer';
 import { DemoSection } from '@/components/DemoWindow';
 import PlanPreview from '@/components/PlanPreview';
-import { Interlude, Bg } from '@/components/BgVideo';
+import { Interlude, Bg, HeroBg2 } from '@/components/BgVideo';
 import { media } from '@/lib/media';
 import { AssistantDemo, TrainingPlayground } from '@/components/Demos';
 import { EvalLab, RagViz, RoiCalc } from '@/components/Labs';
@@ -34,7 +34,7 @@ export default function Home() {
   const roles = ['ML engineers','LLM engineers','Data scientists','MLOps engineers','AI product leads','Delivery managers','Research scientists','Data annotators','Evaluation specialists','Red-team testers','Solutions architects','Integration engineers','Analytics engineers','Security reviewers'];
   return (<>
 
-    <div className="hero"><Bg name="city" dim={0.3} side/>
+    <div className="hero"><HeroBg2 dim={0.3} side/>
       <div className="wrap hg"><div>
         <Link href="/services/ai-evaluation" className="chip"><i>New</i>AI Evaluation for model builders →</Link>
         <h1>We implement AI systems <TitleSwap words={['enterprises','growing businesses','SMEs','public institutions','individual experts']}/></h1>
